@@ -33,3 +33,22 @@ exports.getById = function (req, res) {
     }
   );
 };
+
+//POST DATA
+exports.addMhs = function (req, res) {
+  var nim = req.body.nim;
+  var nama = req.body.nama;
+  var jurusan = req.body.jurusan;
+
+  db.query(
+    "INSERT INTO mahasiswa (nim,nama,jurusan) values(?,?,?)",
+    [nim, nama, jurusan],
+    function (err,rows,field) {
+      if (err) {
+        console.log(err);
+      } else {
+        response.ok("Berhasil Menambah Data", res);
+      }
+    }
+  );
+};

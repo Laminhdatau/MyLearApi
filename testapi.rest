@@ -1,0 +1,24 @@
+###
+GET http://localhost:1212/tampil
+
+###
+GET http://localhost:1212/tampilkan/1 
+
+###
+POST http://localhost:1212/addMhs
+Content-Type: application/json
+
+{
+    "nim":"126811",
+    "nama":"marno",
+    "jurusan":"THP"
+}
+
+###
+PUT http://localhost:1212/updateData/1
+Content-Type: :application/json
+
+{
+    "nim"
+}
+
