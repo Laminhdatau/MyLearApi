@@ -43,11 +43,44 @@ exports.addMhs = function (req, res) {
   db.query(
     "INSERT INTO mahasiswa (nim,nama,jurusan) values(?,?,?)",
     [nim, nama, jurusan],
-    function (err,rows,field) {
+    function (err, rows, field) {
       if (err) {
         console.log(err);
       } else {
         response.ok("Berhasil Menambah Data", res);
+      }
+    }
+  );
+};
+
+exports.ubah = function (req, res) {
+  var id = req.params.id;
+  var nim = req.body.nim;
+  var nama = req.body.nama;
+  var jurusan = req.body.jurusan;
+  db.query(
+    "UPDATE mahasiswa set nim=?,nama=?,jurusan=? where id_mhs=?",
+    [nim, nama, jurusan, id],
+    function (err, rows, field) {
+      if (err) {
+        console.log(err);
+      } else {
+        response.ok("Berhasil update", res);
+      }
+    }
+  );
+};
+
+exports.delete = function (req, res) {
+  var id = req.params.id;
+  db.query(
+    "DELETE FROM mahasiswa where id_mhs=?",
+    [id],
+    function (err, rows, field) {
+      if (err) {
+        console.log(err);
+      } else {
+        response.ok("Berhasil menghapus data", res);
       }
     }
   );

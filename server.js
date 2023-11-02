@@ -11,6 +11,6 @@ app.use(bodyParser.json());
 var routes = require("./routes");
 routes(app);
 
-app.listen(1212, () => {
+app.listen(3000, () => {
   console.log("Sukses");
 });
