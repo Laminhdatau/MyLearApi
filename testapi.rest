@@ -4,8 +4,12 @@ GET http://localhost:1212/tampil
 ###
 GET http://localhost:1212/tampilkan/1 
 
+
 ###
-POST http://localhost:1212/addMhs
+DELETE  http://localhost:3000/delete/18
+
+###
+POST http://localhost:1122/addMhs
 Content-Type: application/json
 
 {
@@ -14,11 +18,14 @@ Content-Type: application/json
     "jurusan":"THP"
 }
 
-###
-PUT http://localhost:1212/updateData/1
+### 
+PUT http://localhost:3000/ubah/2
 Content-Type: :application/json
 
 {
-    "nim"
+    "nim":"'123123'",
+    "nama":"'fadel'",
+    "jurusan":"'IPA'"
+
 }
 
