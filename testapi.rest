@@ -1,6 +1,7 @@
 ###
 GET http://localhost:3000/tampil
 
+
 ###
 GET http://localhost:3000/tampilMk
 
@@ -38,9 +39,9 @@ Content-Type: application/json
 # Content-Type: application/x-www-form-urlencoded
 
 {
-    "username":"sandi",
-    "email":"sandi@gmail.com",
-    "password":"sandi",
+    "username":"1",
+    "email":"1@gmail.com",
+    "password":"1",
     "role":"2"
 }
 
@@ -50,9 +51,22 @@ POST http://localhost:3000/auth/api/v1/login
 Content-Type: application/json
 
 {
-    "email":"sandi@gmail.com",
-    "password":"sandi"
+    "email":"1@gmail.com",
+    "password":"1"
 }
+
+
+###
+
+GET http://localhost:3000/auth/api/v1/rahasia HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dzIjpbeyJpZF91c2VyIjo5LCJ1c2VybmFtZSI6IjEiLCJlbWFpbCI6IjFAZ21haWwuY29tIiwicGFzc3dvcmQiOiJjNGNhNDIzOGEwYjkyMzgyMGRjYzUwOWE2Zjc1ODQ5YiIsInJvbGUiOjEsInRnbF9jcmVhdGVkIjoiMjAyMy0xMS0wM1QwNzoyMjoxOS4wMDBaIn1dLCJpYXQiOjE2OTg5OTg3NjgsImV4cCI6MTY5OTAwMDIwOH0.rcUGy1ccJlBGbzcwrg1ezKA31kGH0miQnCrZSLeo3K4
+Content-Type: application/json
+
+{
+    "role":"1"
+}
+
+
 
 
 
