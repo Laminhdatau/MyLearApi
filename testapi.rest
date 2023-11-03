@@ -38,8 +38,27 @@ Content-Type: application/json
 # Content-Type: application/x-www-form-urlencoded
 
 {
-    "username":"admin",
-    "email":"admin@gmail.com",
-    "password":"admin",
-    "role":"1"
+    "username":"sandi",
+    "email":"sandi@gmail.com",
+    "password":"sandi",
+    "role":"2"
 }
+
+
+###
+POST http://localhost:3000/auth/api/v1/login
+Content-Type: application/json
+
+{
+    "email":"sandi@gmail.com",
+    "password":"sandi"
+}
+
+
+
+
+
+
+
+
+
