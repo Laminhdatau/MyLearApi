@@ -85,3 +85,17 @@ exports.delete = function (req, res) {
     }
   );
 };
+
+//MENAMPILKAN MK GRUP
+exports.tampilGroupMk = function (req, res) {
+  db.query(
+    "SELECT m.id_mhs,m.nim,m.nama,m.jurusan,mk.mk,mk.sks FROM krs k , matakuliah mk , mahasiswa m where k.id_mk=mk.id_mk and k.id_mhs=m.id_mhs order by m.id_mhs",
+    function (err, rows, fields) {
+      if (err) {
+        console.log(err);
+      } else {
+        response.oknested(rows, res);
+      }
+    }
+  );
+};

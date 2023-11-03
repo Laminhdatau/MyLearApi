@@ -11,7 +11,9 @@ module.exports = function (app) {
 
   app.route("/addMhs").post(jsonku.addMhs);
 
-  app.route("/ubah/:id").put(jsonku.ubah);
+  app.route("/ubah/:id").post(jsonku.ubah);
 
   app.route("/delete/:id").delete(jsonku.delete);
+
+  app.route("/tampilMk").get(jsonku.tampilGroupMk);
 };
