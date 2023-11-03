@@ -2,6 +2,7 @@
 
 const { response } = require("express");
 
+//RESPONSE MASTER DATA
 exports.ok = function (values, res) {
   var data = {
     status: 200,
@@ -11,7 +12,7 @@ exports.ok = function (values, res) {
   res.end();
 };
 
-//RESPONSE NESTED MK
+//RESPONSE NESTED MK/DATA ARRAY DALAM ARRAY
 exports.oknested = function (values, res) {
   //LAKUKAN AKUMULASI
   const hasil = values.reduce((akumulasikan, item) => {

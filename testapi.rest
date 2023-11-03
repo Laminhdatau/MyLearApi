@@ -7,7 +7,6 @@ GET http://localhost:3000/tampilMk
 ###
 GET http://localhost:3000/tampil/2
 
-
 ###
 DELETE  http://localhost:3000/delete/10
 
